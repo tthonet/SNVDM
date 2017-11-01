@@ -31,7 +31,7 @@ The input files used to run our collapsed Gibbs sampling programs are the same a
 The first field is the user ID (a string or a number). After a tabulation, the second field corresponds to the viewpoint label for this user -- used only in the evaluation performed at the end of the execution. Then, after another tabulation, follows the documents posted by the user. A document's words are separated by spaces. If a document was interacted upon by another user (i.e. a sender, following the terminology of our paper), the document's last word is followed by a semicolon (";"), any keyword (e.g., interactedUponBy), and a colon ":" after which the list of interacting users' IDs are written, separated by space. Documents posted by the user are separated by pipes ("|"). Finally, after another tabulation, appears the list of IDs (separated by spaces) for users on which the line's user interacted (i.e., the recipients).
 
 Example:
-<pre><code>hillary	democrat	i hate #gop;interactedUponBy:barack john|obamacare ftw;interactedUponBy:barack|i love thai food	bill barack</code></pre>
+<pre><code>@hillary	democrat	i hate #gop;interactedUponBy:@barack @john|obamacare ftw;interactedUponBy:@barack|i love thai food	@bill @barack</code></pre>
 
 Note that in the case of VODUM the input file also needs to contain the part-of-speech category (0 or 1) for each token. Therefore, in the input file for VODUM (only), each word is followed by its part-of speech and both are separated by a colon (":"), e.g., <word_11>:<pos_category_11>.
 
